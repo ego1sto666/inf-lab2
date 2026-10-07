@@ -1,0 +1,27 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Клиент" as Client
+actor "Менеджер" as Manager
+actor "Администратор" as Admin
+
+rectangle "Система учета туристических путевок" {
+    Client --> (Регистрация)
+    Client --> (Вход в систему)
+    Client --> (Просмотр каталога туров)
+    Client --> (Выбор тура)
+    Client --> (Бронирование тура)
+    Client --> (Оплата тура)
+    Client --> (Просмотр своих броней)
+
+    Manager --> (Вход в систему)
+    Manager --> (Подтверждение бронирования)
+    Manager --> (Оформление продажи)
+    Manager --> (Просмотр списка броней)
+
+    Admin --> (Вход в систему)
+    Admin --> (Управление турами)
+    Admin --> (Управление пользователями)
+}
+@enduml
